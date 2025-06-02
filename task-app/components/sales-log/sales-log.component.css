@@ -1,0 +1,150 @@
+.sales-log {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+h2 {
+  font-size: 24px;
+  color: #333;
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+h2 button {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: background-color 0.3s;
+}
+
+h2 button:hover {
+  background-color: #0056b3;
+}
+
+.error-message {
+  color: #dc3545;
+  margin-bottom: 15px;
+  font-size: 14px;
+}
+
+.filter {
+  margin-bottom: 20px;
+}
+
+.filter label {
+  margin-right: 10px;
+  font-weight: bold;
+  color: #555;
+}
+
+.filter select {
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 14px;
+  background-color: white;
+  cursor: pointer;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: white;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+thead th {
+  background-color: #f8f9fa;
+  color: #333;
+  padding: 12px;
+  text-align: left;
+  font-weight: bold;
+  border-bottom: 2px solid #dee2e6;
+}
+
+tbody tr {
+  border-bottom: 1px solid #dee2e6;
+}
+
+tbody tr:hover {
+  background-color: #f1f3f5;
+}
+
+.date-header {
+  background-color: #e9ecef;
+  font-weight: bold;
+  color: #495057;
+}
+
+.date-header td {
+  padding: 10px;
+}
+
+td {
+  padding: 12px;
+  color: #495057;
+  font-size: 14px;
+}
+
+.task-type-icon {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.task-type-icon i {
+  font-size: 16px;
+  color: #007bff;
+}
+
+.status-open {
+  color: #28a745;
+  font-weight: bold;
+}
+
+.status-closed {
+  color: #dc3545;
+  font-weight: bold;
+}
+
+.note-btn, .add-note-btn {
+  margin-left: 10px;
+  padding: 4px 8px;
+  border: none;
+  border-radius: 4px;
+  font-size: 12px;
+  cursor: pointer;
+}
+
+.note-btn {
+  background-color: #6c757d;
+  color: white;
+}
+
+.add-note-btn {
+  background-color: #17a2b8;
+  color: white;
+}
+
+.note-btn:hover {
+  background-color: #5a6268;
+}
+
+.add-note-btn:hover {
+  background-color: #138496;
+}
+
+select {
+  padding: 4px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 14px;
+  cursor: pointer;
+}
