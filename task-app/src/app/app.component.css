@@ -1,0 +1,61 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+.app-container {
+  padding: 20px;
+  font-family: Arial, sans-serif;
+  background-color: #f5f5f5;
+  min-height: 100vh;
+}
+
+.header {
+  background-color: #1a3c5e;
+  color: white;
+  padding: 10px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header .logo {
+  display: flex;
+  align-items: center;
+}
+
+.header .logo img {
+  height: 40px;
+  margin-right: 10px;
+}
+
+.header .logo span {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.header .logo small {
+  font-size: 12px;
+  display: block;
+}
+
+.header nav a {
+  color: white;
+  margin: 0 10px;
+  text-decoration: none;
+}
+
+.header .user-profile {
+  display: flex;
+  align-items: center;
+}
+
+.header .user-profile span {
+  margin-right: 10px;
+}
+
+.header .user-profile img {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+}
