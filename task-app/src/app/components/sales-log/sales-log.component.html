@@ -1,0 +1,62 @@
+<div class="sales-log">
+  <h2>SALES LOG <button (click)="openModal()">New Task</button></h2>
+  <div *ngIf="errorMessage" class="error-message">
+    {{ errorMessage }}
+  </div>
+  <div class="filter">
+    <label>Task Type</label>
+    <select [(ngModel)]="selectedTaskType" (change)="filterTasks()">
+      <option value="">All</option>
+      <option *ngFor="let type of taskTypes" [value]="type">{{ type }}</option>
+    </select>
+  </div>
+  <table>
+    <thead>
+      <tr>
+        <th>Date</th>
+        <th>Entity Name</th>
+        <th>Task Type</th>
+        <th>Time</th>
+        <th>Contact Person</th>
+        <th>Status</th>
+        <th></th>
+      </tr>
+    </thead>
+    <tbody>
+      <ng-container *ngFor="let date of filteredTasks | unique:'date'">
+        <tr class="date-header">
+          <td colspan="7">{{ date }} - {{ getOpenTaskCount(date) }} Open</td>
+        </tr>
+        <tr *ngFor="let task of filteredTasks | filterByDate:date">
+          <td>{{ task.date }}</td>
+          <td>{{ task.entityName || 'N/A' }}</td>
+          <td>
+            <span class="task-type-icon">
+              <i [class]="getTaskIconClass(task.taskType)"></i>
+              {{ task.taskType || 'N/A' }}
+            </span>
+          </td>
+          <td>{{ task.time }}</td>
+          <td>{{ task.contactPerson || 'N/A' }}</td>
+          <td>
+            <span [class.status-open]="task.status === 'Open'" [class.status-closed]="task.status === 'Closed'">
+              {{ task.status }}
+            </span>
+            <button *ngIf="task.note" (click)="viewNote(task)" class="note-btn">Note</button>
+            <button *ngIf="!task.note" (click)="addNote(task)" class="add-note-btn">Add Note</button>
+          </td>
+          <td>
+            <select (change)="changeStatus(task, $event)">
+              <option value="" disabled selected>Options</option>
+              <option value="Edit">Edit</option>
+              <option value="Closed" *ngIf="task.status === 'Open'">Change status to Closed</option>
+              <option value="Open" *ngIf="task.status === 'Closed'">Change status to Open</option>
+              <option value="Delete">Delete</option>
+            </select>
+          </td>
+        </tr>
+      </ng-container>
+    </tbody>
+  </table>
+  <app-new-task-modal *ngIf="showModal" [task]="taskToEdit" (close)="closeModal()" (save)="addTask($event)"></app-new-task-modal>
+</div>
