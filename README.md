@@ -85,11 +85,6 @@ The Angular app will be available at `http://localhost:4200`.
 
 #### `GET /api/tasks`
 - Description: Fetch all tasks
-- Query Parameters:
-  - `sort_by`: Sort field (`due_date`, `priority`, etc.)
-  - `status`: Filter by task status (`pending`, `completed`)
-  - `priority`: Filter by priority (`low`, `medium`, `high`)
-  - `search`: Filter by task name or description
 
 #### `POST /api/tasks`
 - Description: Create a new task
@@ -116,7 +111,6 @@ The Angular app will be available at `http://localhost:4200`.
 ## Features
 
 - CRUD operations for tasks and notes
-- Filters by priority, due date, and status
 - Responsive and clean UI with Angular and Tailwind
 - SQLite-based storage (easily switchable to PostgreSQL/MySQL)
 - RESTful API using Flask
