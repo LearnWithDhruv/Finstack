@@ -94,15 +94,6 @@ The Angular app will be available at `http://localhost:4200`.
 #### `POST /api/tasks`
 - Description: Create a new task
 - Body:
-```json
-{
-  "title": "Buy groceries",
-  "description": "Milk, Eggs, Bread",
-  "due_date": "2025-06-05",
-  "priority": "high",
-  "status": "pending"
-}
-```
 
 #### `PUT /api/tasks/<id>`
 - Description: Update a task
@@ -116,12 +107,6 @@ The Angular app will be available at `http://localhost:4200`.
 
 #### `POST /api/tasks/<id>/notes`
 - Description: Add a note to a task
-- Body:
-```json
-{
-  "note": "Check if we already have eggs."
-}
-```
 
 #### `DELETE /api/notes/<note_id>`
 - Description: Delete a note
